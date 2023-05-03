@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Most Popular Movies{% endblock %}
+
+{% block body %}
+    <h1>Most Popular Movies</h1>
+
+    <ul>
+        {% for movie in movies %}
+            <li>{{ movie['title'] }} - imdb id : {{ movie['imdbId'] }}</li>
+            {# {{ dump(movie) }} #}
+        {% endfor %}
+    </ul>
+{% endblock %}
